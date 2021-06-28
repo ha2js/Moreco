@@ -21,6 +21,7 @@ body, html {
 }
 .loginForm {
     background-color: rgb(255,255,255);
+    position:absolute;
     left:37%;
     width:25%;
     top:20%;
