@@ -1,0 +1,48 @@
+package com.moreco.movie;
+
+import java.sql.*;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
+public class movieDAO {
+	Connection conn = null;
+	PreparedStatement pre  = null;
+	ResultSet rs = null;
+	String sql = "";
+	
+	private Connection getCon() throws Exception {
+		Context initCTX = new InitialContext();
+		
+		DataSource ds = (DataSource)initCTX.lookup("java:comp/env/jdbc/mysqlDB");
+		conn = ds.getConnection();
+		
+		return conn;
+	}
+	
+	public void closeDB() {
+		try {
+			if (rs != null) rs.close();
+			if (pre != null) pre.close();
+			if (conn != null) conn.close();
+			System.out.println("자원 해제");
+			
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	public void insertMovie() {
+		
+		float review_point = 0.0;
+		try {
+			conn = getCon();
+			sql = "insert into movie_info values("
+			
+		} catch(Exception e) {
+			
+		} finally {
+			closeDB();
+		}
+	}
+}

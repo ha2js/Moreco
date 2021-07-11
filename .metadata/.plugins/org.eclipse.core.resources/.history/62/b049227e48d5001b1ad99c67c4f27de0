@@ -1,0 +1,15 @@
+package com.moreco.movie;
+
+public class movie_set {
+	private int category_idx;
+	private String category_name;
+	
+	private int movie_idx;
+	private String movie_name;
+	private String movie_director;
+	private String movie_content;
+	private String movie_img;
+	private float review_point;
+	
+	
+}

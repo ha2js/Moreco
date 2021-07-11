@@ -1,0 +1,31 @@
+<%@page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
+<%@page import="com.oreilly.servlet.MultipartRequest"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Moreco : 영화 등록</title>
+</head>
+<body>
+	<%
+		String path = "movie_img";
+		int size = 10 * 1024 * 1024;
+		MultipartRequest multi = new MultipartRequest(request, path, size, "UTF-8", new DefaultFileRenamePolicy());
+		
+		String category_idx = multi.getParameter("category_idx");
+		String movie_name = multi.getParameter("movie_name");
+		String movie_director = multi.getParameter("movie_director");
+		String movie_rank = multi.getParameter("real_movie_rank");
+		String movie_summary = multi.getParameter("movie_summary");
+		String movie_img = multi.getParameter("movie_img");
+	%>
+	<%=category_idx %><br>
+	<%=movie_name %><br>
+	<%=movie_director %><br>
+	<%=movie_rank %><br>
+	<%=movie_summary %><br>
+	<%=movie_img %><br>
+</body>
+</html>

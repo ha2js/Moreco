@@ -1,0 +1,38 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import = "com.moreco.movie.movieDAO" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="css/main.css" rel="stylesheet">
+<link href="images/svg/moreco_favicon.gif" rel="shortcut icon" type="image/x-icon">
+<title>Moreco : Movie recommend</title>
+</head>
+<body>
+	<%
+		request.setCharacterEncoding("UTF-8");
+		String test = (String)session.getAttribute("user_id");
+		int sideIdx = 0;
+		
+		if (request.getParameter("sideIdx") != null)
+			sideIdx = Integer.parseInt(request.getParameter("sideIdx"));
+		
+	%>
+	<aside>
+		<jsp:include page="sidebar.jsp?sideIdx=<%=sideIdx %>" flush="true"></jsp:include>
+	</aside>
+	<div class="b-example-divider"></div>
+	<nav id="top">
+		<jsp:include page="header.jsp" flush="true"></jsp:include>
+	</nav>
+	<div id="wrap">	
+		<section>
+			test <%=test %>
+		</section>
+	</div>
+	<footer>
+		<jsp:include page="footer.html" flush="true"></jsp:include>
+	</footer>
+</body>
+</html>

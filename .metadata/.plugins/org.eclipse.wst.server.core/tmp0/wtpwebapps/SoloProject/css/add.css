@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+.add_movies {
+  margin-top: 35px;
+  margin-left: 80px;
+}
+aside {
+    float: left;
+    width:23%; 
+}
+ 
+section {
+    float: left; width:77%;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding-top:30px;
+    padding-left:90px;
+    
+}
+footer {clear: both;}
+
+.add_btn{
+	margin-top:23px;
+	margin-bottom:125px;
+}

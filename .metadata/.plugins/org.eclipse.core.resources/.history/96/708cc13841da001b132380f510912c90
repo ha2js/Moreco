@@ -1,0 +1,37 @@
+@CHARSET "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR|Yeon+Sung");
+
+aside {
+    float: left;
+    width:23%;
+}
+ 
+section {
+	margin-top:40px;
+    float: left; width:77%;
+	font-family: "Noto Sans KR", sans-serif;
+	font-size:30px;    
+}
+footer {
+    clear: both;    
+}
+table {
+	margin-top:20px;
+	margin-left:40px;
+	font-size:15px;
+}
+table tr td {text-align:center;}
+img {
+	width:270px;
+	height:250px;
+}
+.img_td {
+	width:250px;
+	height:250px;
+}
+.btn_td {
+	width:50px;
+}
+table tr td {
+	border:1px solid rgb(0,0,0);
+}

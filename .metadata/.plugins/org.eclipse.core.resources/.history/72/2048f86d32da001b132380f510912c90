@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+
+
+aside {
+    float: left;
+    width:23%;
+    
+}
+ 
+section {
+    float: left; width:77%;
+    overflow-y:scroll;
+}
+footer {
+    clear: both;
+
+    
+}
+
+

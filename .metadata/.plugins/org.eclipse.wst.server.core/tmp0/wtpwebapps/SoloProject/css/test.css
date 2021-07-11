@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.fw01 {font-weight: 100;}
+.fw02 {font-weight: 200;}
+.fw03 {font-weight: 300;}
+.fw04 {font-weight: 100;}
+.fw05 {font-weight: 200;}
+.fw06 {font-weight: 300;}
+.fw07 {font-weight: 100;}
+.fw08 {font-weight: 200;}
+.fw09 {font-weight: 300;}
+.fw10 {font-weight: 100;}
+.fw11 {font-weight: 200;}
+.fw12 {font-weight: 300;}
+
+
+.fw1>b {font-weight: normal;}
+/*
+    A>B는 부모 자식 관계일 때의
+    조건을 만족하면 적용됨
+    (A의 바로 한 단계 아래에 있는 B
+
+    A B는 조상자손관계일 때의 조건만 만족하면 적용됨
+    (A 아래에 있는 B)
+*/
