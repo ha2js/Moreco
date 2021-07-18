@@ -159,4 +159,67 @@ public class userDAO {
 		}
 		return info;
 	}
+	
+	public user_set selectUser(String user_id) {
+		user_set us = new user_set();
+		try {
+			conn = getCon();
+			sql = "select * from user_info where user_id = ?";
+			pre = conn.prepareStatement(sql);
+			pre.setString(1, user_id);
+			rs = pre.executeQuery();
+			
+			if (rs.next()) {
+				us.setUser_pw(rs.getString(2));
+				us.setUser_name(rs.getString(3));
+				us.setUser_front_ssn(rs.getString(4));
+				us.setUser_back_ssn(rs.getString(5));
+			}
+			
+		} catch(Exception e) {
+			System.out.println(e.getMessage());
+		} finally {
+			closeDB();
+		}
+		return us;
+	}
+	public void updateUser(user_set us, String user_id) {
+		
+		try {
+			conn = getCon();
+			sql = "update user_info set user_name = ?, user_pw = ?, user_front_ssn = ? , user_back_ssn = ?,  user_gender = ?, user_age = ? where user_id = ?";
+			pre = conn.prepareStatement(sql);
+			
+			pre.setString(1, us.getUser_name());
+			pre.setString(2, us.getUser_pw());
+			pre.setString(3, us.getUser_front_ssn());
+			pre.setString(4, us.getUser_back_ssn());
+			pre.setString(5, us.getUser_gender());
+			pre.setString(6, us.getUser_age());
+			pre.setString(7, user_id);
+			
+			pre.executeUpdate();
+			
+		} catch(Exception e) {
+			System.out.println(e.getMessage());
+		} finally {
+			closeDB();
+		}
+	}
+	public void deleteUser(String user_id) {
+		
+		try {
+			conn = getCon();
+			sql = "delete from user_info where user_id = ?";
+			pre = conn.prepareStatement(sql);
+			pre.setString(1, user_id);
+			
+			pre.executeUpdate();
+			
+		} catch(Exception e) {
+			System.out.println(e.getMessage());
+		} finally {
+			closeDB();
+		}
+	}
 }
