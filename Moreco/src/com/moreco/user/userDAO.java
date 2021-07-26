@@ -36,7 +36,7 @@ public class userDAO {
 		}
 	}
 	
-	public boolean insert_user(user_set us) {
+	public boolean insert_user(userDTO us) {
 		boolean check = true;
 		try {
 			conn = getCon();
@@ -113,7 +113,7 @@ public class userDAO {
 		}
 		return check;
 	}
-	public String find_info (user_set us) {
+	public String find_info (userDTO us) {
 		String info = "";
 		
 		try {
@@ -160,8 +160,8 @@ public class userDAO {
 		return info;
 	}
 	
-	public user_set selectUser(String user_id) {
-		user_set us = new user_set();
+	public userDTO selectUser(String user_id) {
+		userDTO us = new userDTO();
 		try {
 			conn = getCon();
 			sql = "select * from user_info where user_id = ?";
@@ -183,7 +183,7 @@ public class userDAO {
 		}
 		return us;
 	}
-	public void updateUser(user_set us, String user_id) {
+	public void updateUser(userDTO us, String user_id) {
 		
 		try {
 			conn = getCon();

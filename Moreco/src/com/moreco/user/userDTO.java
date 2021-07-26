@@ -1,6 +1,6 @@
 package com.moreco.user;
 
-public class user_set {
+public class userDTO {
 	
 	private String user_id;
 	private String user_pw;
