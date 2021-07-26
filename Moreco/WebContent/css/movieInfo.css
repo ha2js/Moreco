@@ -1,0 +1,81 @@
+@CHARSET "UTF-8";
+
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR|Yeon+Sung');
+html,body {
+    font-family:"Noto Sans KR",sans-serif;
+}
+.movieInfo_table {font-size:15px;}
+aside {
+    float: left;
+    width:23%;
+    
+    height:100vh;
+}
+section {
+	margin-top:40px;
+    float: left; width:77%;  
+}
+.infoTitle {
+	font-size:30px; 
+	margin-bottom:25px;
+	}
+footer {
+    clear: both;    
+}
+img {
+    width:200px;
+    height:250px;
+    border-radius: 45px;
+}
+.movieImg {
+	margin-left:35px;
+}
+.movie_info_td {
+    width:300px;
+}
+.movie_content {
+    width:300px;
+    word-break: break-all;
+}
+.review {
+	font-size:15px;
+}
+
+.comment {
+	margin-top:40px;
+	margin-bottom:30px;
+	width:800px;
+}
+
+.comment .delete_btn {text-align:right;}
+.comment .tr_first_child {height:35px;}
+.comment .tr_last_child {
+	border-bottom: 1px solid rgb(180,180,180);
+	
+	text-align:right;
+
+}
+.comment .review_str {
+	word-break: break-all;
+	height:35px;
+}
+.comment tr th {
+	width:100px;
+}
+.comment .review_point {
+	color:rgb(255,212,0);
+}
+.comment .none_info {
+	padding-top:30px;
+	border-top:1px solid rgb(180,180,180);
+	text-align:center;
+}
+.paging {
+	margin-bottom:15px;
+	width:800px;
+	text-align:center;
+}
+.pagination li {
+  float: left;
+}

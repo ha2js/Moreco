@@ -65,7 +65,7 @@
 						</button>
 						<ul class="dropdown-menu">
 							<li><a class="dropdown-item"><%=user_id %>님</a></li>
-							<li><a class="dropdown-item" href="#">회원 정보 변경</a></li>
+							<li><a class="dropdown-item" href="changeInfo.jsp?sideIdx=<%=sideIdx%>">회원 정보 변경</a></li>
 							<li><hr class="dropdown-divider"></li>
 							<li><a class="dropdown-item" href="../member/logout.jsp">로그아웃</a></li>
 						</ul>
