@@ -1,4 +1,4 @@
-<%@page import="com.moreco.user.user_set" %>
+<%@page import="com.moreco.user.userDTO" %>
 <%@page import="com.moreco.user.userDAO" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -12,7 +12,7 @@
 	<%
 		request.setCharacterEncoding("UTF-8");
 	%>
-		<jsp:useBean id="userJoin" class="com.moreco.user.user_set"/>
+		<jsp:useBean id="userJoin" class="com.moreco.user.userDTO"/>
 		<jsp:setProperty property="*" name="userJoin"/>
 	<%
 		userDAO uDAO = new userDAO();
