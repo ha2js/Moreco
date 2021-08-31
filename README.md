@@ -79,3 +79,16 @@
 
 
 ## 화면 구성
+
+#### 1. 로그인 페이지
+![login](https://user-images.githubusercontent.com/85788300/131472709-ab78198a-2811-481b-9766-8c0be1f8f87b.png)
+
+#### 2. 메인 페이지
+![main](https://user-images.githubusercontent.com/85788300/131472765-20147d3e-806a-4841-a7f1-320a94f02324.png)
+
+#### 3. 영화 페이지
+![movieInfo](https://user-images.githubusercontent.com/85788300/131472802-7489c9ad-c8ec-4ff8-8058-a4647f7c6fbf.png)
+
+#### 4. 문의 게시판 페이지
+![qna_after](https://user-images.githubusercontent.com/85788300/131472859-57cf6315-f76a-439f-b24c-d0744db354ea.png)
+
